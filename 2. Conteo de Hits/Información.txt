@@ -1,0 +1,7 @@
+Para el Proceso de validación se llevaron a cabo dos pasos:
+
+Primero se filtraron las bases de datos. Cada base de datos de los experimentos 1, 2 y 3 Se pasaron por un filtro para dejar, por una parte, solo las configuraciones pertenecientes al frente de pareto del experimento, y por el otro, solo aquellas configuraciones que reprodujeron la métricas consideradas válidas para los experimentos. Tras aplicar estos filtros, cada simulación fue re-simulada, esta vez para los tres experimentos en vez de solo en su experimento de origen, para revisar si cada configuración mantenía su comportamiento y si era capaz de producir buenos resultados en el resto.
+
+Tras re-simular cada configuración del frente de pareto o que fuera válida según las métricas establecidas, Se realizó un conteo y graficación del análisis de los resultados de la re-simulación.
+
+Se adjunta más información en cada carpeta, pero el orden sería filtrado de bases de datos -> conteo y graficación

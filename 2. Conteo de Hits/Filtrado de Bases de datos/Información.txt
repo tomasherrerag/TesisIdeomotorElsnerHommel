@@ -1,0 +1,15 @@
+Como se mencionó antes, la función de cada uno de los códigos dentro de estas carpetas es filtrar y re-simular ciertos experimentos, pero esta vez, la simulación de los experimentos no sería solo en su experimento de origen, si no que en todos los experimentos.
+
+de esta forma se da la siguiente nomenclatura:
+
+Aquellas carpetas que comienzan con "Pareto" son aquellas que filtran buscando solo los integrantes del frente de pareto de la exploración inicial
+
+Aquellas carpetas que comienzan con "Valid" Son aquellas que filtran buscando las configuraciones que produjeron métricas de salida consideradas correctas.
+
+La segunda palabra clave, se refiere al sampler que produjo las configuraciones en la exploración de origen, En este caso están todas con "Default" que corresponde a TPESampler. En los archivos completos también se utilizó "RandomSampler", pero estos no fueron lo suficientemente informativos como para ser utilizados en el informe final.
+
+Por último, el numero al final del nombre de cada carpeta se refiere al experimento en el que se situó la exploración, de esta forma, si termina con 3, significa que viene de la simulación del experimento 3, haciendo que el proceso y las métricas correspondan a las de dicho experimento.
+
+Cada carpeta contiene el código de filtrado y simulación (por ejemplo "DBCParetoDefault1.py"), la base de datos de la primera exploración como entrada("exp1Default.db") y la base filtrada cuyo nombre parte con "validación_" como salida("validacion_pareto1Default.db").
+
+Recordar entonces que mientras "exp1Default.db", tiene resultados solo del experimento 1, "validación_pareto1Default.db" tiene salidas para los tres experimentos. 

@@ -1,0 +1,17 @@
+En los archivos de conteo y graficación tenemos código que solo se encarga de hacer conteo sobre las bases de datos, intentando aplicar las métricas.
+
+De esta forma, en los códigos de conteoHits y conteoHitsSoft, se guardan las métricas utilizadas para validar los tres experimentos.
+
+Dicho esto, ya que conteoHits está básicamente contenido en conteoHitsSoft, este último es aquel que se utilizó para generar las imágenes utilizadas en los documentos.
+
+Adicionalmente, se puede ver que hay cuatro carpetas. Cada una de estas carpetas indica que métrica se utilizó para revisar la validez de las salidas. En el informe sólo se utilizó la carpeta de "Coincidencia + Skips", pero hay 3 opciones adicionales. A continuación se describirá lo que se revisa en cada una.
+
+"Coincidencia + Skips" aplica el filtro de validez tanto para el porcentaje de coincidencia como para el porcentaje de omisiones en ensayos de respuesta y respuestas en ensayos de omisión.
+
+"Coincidencia" aplica el filtro solo sobre la coincidencia, ignorando si hubieron errores con las omisiones en ensayos de respuesta o respuestas en ensayos de omisión.
+
+De la misma forma, "Skips" solo aplica el filtro sobre los errores de omisión, sean omisiones en ensayos de respuesta o respuesta en ensayos de omisión.
+
+Por otro lado, "Sin skips RespondidosCond" solo revisa la coincidencia y las omisiones en los ensayos de respuesta, ignorando los ensayos de omisión. (no marca respuestas en ensayos de omisión). Este último corresponde a un error al crear la primera versión del código, pero que dio paso a realizar las distintas variaciones, se cree que los datos seccionados de cada caso siguen siendo un dato importante del que se puede obtener información, por lo que se decidió dejar dentro del repositorio.
+
+Cada carpeta contiene las bases de datos re-simuladas globalmente, los códigos bases utilizados y sus salidas como imágenes.
