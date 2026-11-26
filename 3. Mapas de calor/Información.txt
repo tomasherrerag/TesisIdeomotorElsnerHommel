@@ -1,0 +1,8 @@
+Esta carpeta contiene los datos y códigos necesarios para generar las imágenes correspondientes a los gráficos de calor presentados en el informe. Los mapas son generados a través de la ejecución de los códigos "heatmapDesviacion.py" y "heatmapPromedios.py", los cuales hacen uso de los cuatro códigos adicionales presentes en la carpeta.
+
+Para la generación de mapas de calor, es necesario tener:
+
+Las bases de datos de exploración de los tres experimentos (ya que cada una da las métricas de su experimento de origen)
+Las bases de datos validadas (las obtenidas del filtro de pareto y las de las configuraciones que producen salidas válidas)
+
+Existe una base de datos llamada "exp1NoRevDefault" que contiene los datos de las ejecuciones de los ensayos del grupo no reversible para el experimento 1, esto debido a que en la exploración original los datos se guardaron de forma errónea para el acceso futuro. El error en cuestión solo afectaba al guardado de datos y no producía problemas en el calculo de la función objetivo utilizada para la creación del frente de pareto, por lo que en vez de rehacer todo el proceso, se simularon las mismas configuraciones solo para este grupo del experimento 1 y se parchó para esta función. En caso de ser necesario rehacer las pruebas, se crearán los códigos "heatmapDesviacionSolucionado.py" y "heatmapPromediosSolucionado.py", para que se pueda hacer solo con los datos de default 1, 2 y 3.
