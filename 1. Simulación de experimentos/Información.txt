@@ -1,0 +1,11 @@
+En estas carpetas se encuentran los códigos que Simulan cada experimento de elsner y hommel.
+
+Las carpetas tienen en su nombre el sampler utilizado y el número de experimento. De esta forma "Default1" se refiere al sampler por defecto, el cual corresponde a TPE, simulando el experimento 1. Por otro lado, la carpeta "Random2" se refiere a la simulación del experimento dos, utilizando RandomSampler.
+
+Cada Configuración seleccionada por el sampler es puesta a prueba con 10 ejecuciones del experimento, las métricas de salida entonces se mezclan para obtener promedios y desviaciones estándar de cada experimento.
+
+Las bases de datos producidas por cada código pueden ser ejecutadas con optuna-dashboard para obtener el frente de pareto de la base de datos
+
+El código está diseñado para que cada ejecución revise 500 simulaciones por ejecución, esta cantidad es lo que se puede realizar en un día.
+
+la carpeta "ParcheDefault1" contiene el código utilizado para simular solo el grupo reversible del experimento 1, utilizando las mismas configuraciones obtenidas en "Default1", esto fue necesario por un problema de guardado presente en "Default1", el cual producía errores en la generación de los Heatmaps. este error ya fue parchado en Default1.
