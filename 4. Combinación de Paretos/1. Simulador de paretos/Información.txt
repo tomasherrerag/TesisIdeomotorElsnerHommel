@@ -1,0 +1,3 @@
+Cada una de estas carpetas toma la base de datos generada de las simulaciones de exploración, Obtiene el gráfico de pareto, y los re-simula para cada experimento, guardando los datos necesarios para calcular las funciones objetivo, de esta forma, obtenemos los frentes de pareto de un experimento, evaluado en el resto de experimentos.
+
+Cada carpeta contiene la base de datos de origen "expXDefault.db", las bases de datos del frente de pareto evaluado en otro experimento "TransferDefaultXY.db" y las salidas html que serían la representación 3D del frente de pareto simulado en los tres experimentos.
