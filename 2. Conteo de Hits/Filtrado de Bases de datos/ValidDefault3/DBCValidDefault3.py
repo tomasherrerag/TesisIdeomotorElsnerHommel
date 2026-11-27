@@ -5382,7 +5382,7 @@ if __name__ == "__main__":
         objetivo1 = trial.values[1]
         
         #filtro criterio exp
-        if (objetivo0 <= 3 and objetivo1 >= 0):
+        if (objetivo0 <= 3 and objetivo1 <= 4):
             muestra.append(trial)
 
 
