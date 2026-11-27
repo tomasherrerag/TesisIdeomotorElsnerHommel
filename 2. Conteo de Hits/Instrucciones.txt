@@ -1,0 +1,53 @@
+Para generar las imágenes de conteo de configuraciones válidas, primero se debe filtrar y re-simular las bases obtenidas en 1.Simulación de experimentos
+
+Para esto, iremos a uno de los códigos de 1. Filtrado de Bases de datos, donde se debe escoger el filtro a usar, si se busca usar el frente de pareto de la base de datos, o aquellos considerados válidos.
+
+Como dato de entrada, es necesario tener la base de datos de entrada en la misma carpeta del código, si se usa una base de datos obtenida con otros datos, asegurarse que los datos correspondan con los valores especificados en el bloque de "configuración" del código, donde:
+
+STUDY_NAME = nombre del estudio de optuna (si se usa el código entregado, debería funcionar de forma directa al mover el archivo, si se obtiene por otros medios, este nombre se puede obtener de la variable study_name, usada al crear el estudio en el código de simulación con optuna de la base de datos)
+
+BASE_ORIGEN = nombre del archivo correspondiente a la base de datos (si se usa el código entregado, debería funcionar de forma directa al mover el archivo)
+
+BASE_VALIDACION = nombre del archivo de salida, correspondiente a la base de datos re-simulada
+
+ORIGEN = Etiqueta de marcado para saber de que experimento y sampler viene
+
+N_REPETICIONES = numero a de simulaciones para re-simular las configuraciones
+
+En caso de usar el frente de pareto, podemos revisar el código, pero no debería haber alguna configuración adicional necesaria, solo se debería llamar a python para ejecutar el archivo con la base de datos de entrada en la misma carpeta. 
+
+Por otro lado, si se utiliza el filtrado por configuraciones válidas, se puede revisar y modificar las métricas de validez utilizando las siguientes líneas:
+
+EXP1:
+#filtro criterio exp
+        if (objetivo0 <= 3 and objetivo1 >= 0):
+            muestra.append(trial)
+
+EXP2:
+#filtro criterio exp
+        if (objetivo0 <= 3 and objetivo1 <= 1):
+            muestra.append(trial)
+
+EXP3:
+#filtro criterio exp
+        if (objetivo0 <= 3 and objetivo1 <= 4):
+            muestra.append(trial)
+
+
+Tras Haber re-simulado las bases de datos, entrar a "2. Conteo y Graficación" donde se debe entrar a la carpeta cuyo criterio se quiere analizar:
+
+Coincidencia: Solo revisa que el porcentaje de coincidencia esté bien
+Skips: Solo revisa el numero de omisiones en ensayos de respuesta y respuestas en ensayos de omisión
+Sin skips RespondidosCond: Solo revisa el numero de omisiones en ensayos de respuesta
+Coincidencia + Skips: Revisa todas las métricas, es decir, coincidencia; omisiones en ensayos de respuesta; respuestas en ensayos de omisión
+
+Dentro de cada carpeta hay un código para realizar las imágenes solo con el promedio (ConteoHits.py), junto con el código que permite usar la desviación estándar(ConteoHitsSoft.py)
+
+Cada archivo de conteo tiene los parámetros de validez en el bloque de rangos esperados, por ejemplo:
+
+RANGOS = {
+    "exp1_noRev": (97, 99),
+    "exp1_rev": (1, 3),
+    "exp2": (50, 58),
+    "exp3": (55, 65),
+}
