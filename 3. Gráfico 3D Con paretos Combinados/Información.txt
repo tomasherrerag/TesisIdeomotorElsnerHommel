@@ -1,9 +1,0 @@
-Esta carpeta contiene dos variaciones para generar los gráficos 3D que contienen el comportamiento de los paretos obtenidos, al ser evaluados en el resto de experimentos.
-
-La diferencia está en como se evalúa el punto optimo buscado en el experimento1, "grafico3DHard" utiliza el punto (0,350) como punto perfecto, ya que se buscaba minimizar los errores de coincidencia para la primera coordenada, mientras que se buscaba maximizar la diferencia entre los tiempos dee respuesta entre los tiempos reversible y no reversibles, dicho eso, la diferencia de tiempo máxima alcanzada fue de 350.
-
-Por otro lado, "grafico3D" toma como punto perfecto para el experimento todo aquel que como segunda coordenada sea mayor a 100, de esta forma, tanto (0,101) tiene el mismo valor de error que (0,300), siendo este valor cero. si la coordenada y de un punto es menor a 100, se calculará la distancia entre dicho punto y  (0,100), si el valor de Y es mayor a 100, el error será solo el valor de la coordenada X, la cual indica la diferencia con los valores de coincidencia reportados por Elsner y Hommel.
-
-De esta forma, los códigos "grafico3D.py" y "grafico3DHard", producen cada uno un gráfico 3D que contiene los puntos evaluados en otro experimento.
-
-Adicionalmente, en esta sección, se hizo un estudio tanto para el comportamiento de los puntos considerados válidos en su experimento original, al ser evaluados en los otros experimentos. El resultado de este estudio está en la carpeta "valid" mientras que el estudio de la re-simulación de los frentes de Pareto está en la carpeta "Pareto"
