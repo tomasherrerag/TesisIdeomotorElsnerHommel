@@ -1,0 +1,9 @@
+Existen dos variaciones de gráficos KDE
+
+Por una parte tenemos los KDE utilizados en el informe, que están dentro de la carpeta "KDE"
+
+Por otro lado, tenemos los KDEs acompañados de los histogramas de la variable en la carpeta "KDEHistogramas"
+
+Cada carpeta contiene los KDEs generados con los datos de las configuraciones pertenecientes al frente de pareto, o de las configuraciones consideradas válidas para cada experimento.
+
+En cada carpeta, se encuentras las bases de datos utilizadas para la generación de las imágenes, el código fuente y las imágenes de salida.
