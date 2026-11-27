@@ -1,0 +1,36 @@
+Para generar la base de datos de un experimento, sólo se necesita el código base, como ejemplo usaremos "exploraciónDefault1.py".
+
+En caso de necesitar revisar las variables modificables, podemos abrir el texto y buscar la definición de la función objective, la cual tiene los siguientes datos por defecto:
+
+def objective(trial):
+
+    tiempoExp = trial.suggest_int("tiempoExp", 100, 1000)
+    umbralActividad = trial.suggest_float("umbralActividad", 0.2, 0.75)
+    ruidoInputAprendizaje = trial.suggest_float("ruidoInputAprendizaje", 0.0, 14.0)
+    ruidoDirectaAprendizaje = trial.suggest_float("ruidoDirectaAprendizaje", 0.0, 14.0)
+    ruidoIndirectaAprendizaje = trial.suggest_float("ruidoIndirectaAprendizaje", 0.0, 14.0)
+    ruidoHiperdirectaAprendizaje = trial.suggest_float("ruidoHiperdirectaAprendizaje", 0.0, 14.0)
+    ruidoEntregaAprendizaje = trial.suggest_float("ruidoEntregaAprendizaje", 0.0, 14.0)
+    ruidoInputReaccion = trial.suggest_float("ruidoInputReaccion", 0.0, 14.0)
+    ruidoDirectaReaccion = trial.suggest_float("ruidoDirectaReaccion", 0.0, 14.0)
+    ruidoIndirectaReaccion = trial.suggest_float("ruidoIndirectaReaccion", 0.0, 14.0)
+    ruidoHiperdirectaReaccion = trial.suggest_float("ruidoHiperdirectaReaccion", 0.0, 14.0)
+    ruidoEntregaReaccion = trial.suggest_float("ruidoEntregaReaccion", 0.0, 4.0)
+    tauDirectaAprendizaje = trial.suggest_int("tauDirectaAprendizaje", 0, 10000)
+    tauIndirectaAprendizaje = trial.suggest_int("tauIndirectaAprendizaje", 0, 10000)
+    tauHiperdirectaAprendizaje = trial.suggest_int("tauHiperdirectaAprendizaje", 0, 10000)
+    TauPostRutaAprendizaje = trial.suggest_int("TauPostRutaAprendizaje", 50, 3000)
+    tauDirectaReaccion = trial.suggest_int("tauDirectaReaccion", 0, 10000)
+    tauIndirectaReaccion = trial.suggest_int("tauIndirectaReaccion", 0, 10000)
+    tauHiperdirectaReaccion = trial.suggest_int("tauHiperdirectaReaccion", 0, 10000)
+    TauPostRutaReaccion = trial.suggest_int("TauPostRutaReaccion", 50, 10000)
+
+Estos son los rangos para cada variable, podemos notar:
+tiempoExp: El tiempo disponible para responder en cada ensayo de prueba.
+umbralActividad: El valor de actividad necesaria en la corteza para producir una respuesta.
+Todas las variables que comienzan con "ruido" son las variables de ruido de las poblaciones del conjunto especificado
+Todas las variables que comienzan con "tau" se refieren a la modificación de la variable de aprendizaje
+
+Tras ajustar estos valores, simplemente llamar a python a través de la consola para ejecutar el código, por defecto, el código simula 500 configuraciones y se detiene, en caso de querer hacer mas configuraciones por ejecución, modificar el valor asignado a la variable n_trials en la linea
+
+study.optimize(objective, n_trials=500)
