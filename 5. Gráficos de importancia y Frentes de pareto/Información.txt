@@ -1,0 +1,5 @@
+Se adjuntan las bases de datos ejecutadas con optuna-dashboard y sus salidas
+
+para ejecutar las bases de datos con optuna-dashboard, ejecutar la base de datos a revisar con el siguiente comando cambiando el nombre de la base de datos:
+
+optuna-dashboard sqlite:///exp1Default.db
