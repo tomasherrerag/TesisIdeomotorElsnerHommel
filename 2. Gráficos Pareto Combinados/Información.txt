@@ -1,7 +1,0 @@
-En esta carpeta se guarda el código "generador.py" el cual junta los frente de paretos evaluados, de tal forma que podamos ver como se desempeñan los frentes de pareto obtenidos de cada experimento, al ser evaluados en un experimento.
-
-De esta forma "generador.py" es el código fuente ejecutado para generar las imágenes utilizados en el informe.
-
-"TransferDefalut12" corresponde a la base de datos obtenida al simular las configuraciones que conforman el frente de Pareto del experimento 1 en el experimento 2 y calcular el valor obtenido de la función objetivo del experimento 2
-
-"pareto_combinado_exp1.png" corresponde a una de las salidas del código, que muestra como se comportan las configuraciones que conforman los frentes de pareto obtenidos en la exploración de los experimentos 1, 2 y 3, al ser re-simulados en el experimento 2, al calcular las métricas resultantes bajo la función objetivo del experimento 2.
