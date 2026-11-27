@@ -1,0 +1,7 @@
+Esta Carpeta contiene los códigos utilizados para revisar como se comportan los frentes de pareto obtenidos de un experimento, al ser puestos a prueba en el resto de experimentos.
+
+Para esto, se tuvo que realizar nuevas re-simulaciones para volver a obtener los datos necesarios para calcular el valor de la función objetivo de los distintos experimentos. De esta forma, lo primero que se hizo, fue re-simular los paretos obtenidos en cada experimento, pero en el contexto de los demás experimentos. Esto se encuentra en la carpeta "1.Simulador de paretos".
+
+Luego, se combinaron los frentes de Pareto para tener un gráfico común en que se encontraran los frentes de pareto, simulados bajo un solo experimento. Este proceso está en la carpeta "2.Graficos Pareto Combinados"
+
+Por último, se realizó un gráfico 3D que contiene la combinación de los tres graficos de pareto, evaluado en los tres experimentos, en un solo gráfico. Debido a la dificultad para mostrar esta herramienta en el informe, esta se eliminó del mismo, pero está disponible en "3. Gráfico 3D Con Paretos Combinados".
